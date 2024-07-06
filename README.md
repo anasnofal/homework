@@ -89,20 +89,7 @@ def test_output(output, *args) -> None:
     assert 'vendor_id' in output.columns, 'vendor_id does not exist'
     assert output['trip_distance'][output['trip_distance']==0].sum()==0, "there are zeros"
     assert output['passenger_count'][output['passenger_count']==0].sum()==0, "there are zeros"
-
-
-
-@test
-def test_output(output, *args) -> None:
-    assert 'vendorid' in output.columns, 'vendorid does not exist'
     
-@test
-def test_output(output, *args) -> None:
-    assert output['passenger_count'].isin([0]).sum() ==0, 'There are rides with zero passengers'
-
-@test
-def test_output(output, *args) -> None:
-    assert output['trip_distance'].isin([0]).sum() ==0,'There are rides distance = 0'
 ```
 
 #### data_exporter
